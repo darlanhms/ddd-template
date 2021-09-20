@@ -18,7 +18,13 @@
         "skipLibCheck": true,
         "removeComments": true,
         "baseUrl": "./src",
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "paths": {
+            "@core/*": ["./shared/core/*"],
+            "@database/*": ["./shared/infra/database/*"],
+            "@utils/*": ["./shared/core/utils/*"],
+            "@shared/*": ["./shared/*"]
+        }
     },
     "include": [
         "src/*.ts",
