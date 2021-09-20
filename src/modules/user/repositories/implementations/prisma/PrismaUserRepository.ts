@@ -6,8 +6,6 @@ import IUserRepository from '@user/repositories/IUserRepository';
 
 export default class PrismaUserRepository extends BaseRepository implements IUserRepository {
     public async insert(user: User): Promise<User> {
-        console.log(UserMapper.toPersistence(user));
-
         const newUser = await this.prisma.user.create({
             data: UserMapper.toPersistence(user),
         });
