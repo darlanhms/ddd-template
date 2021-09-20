@@ -1,12 +1,11 @@
 import UniqueEntityID from '@core/domain/UniqueEntityID';
-import { RawID } from '@core/utils/types';
 
 export default abstract class BaseRepositoryMethods {
     /**
      * @method getId
      * @description função que auxilia a pegar o valor raw do ID
      */
-    getId(id: RawID | UniqueEntityID): RawID {
+    getId(id: string | UniqueEntityID): string {
         if (id instanceof UniqueEntityID) {
             return id.toValue();
         }

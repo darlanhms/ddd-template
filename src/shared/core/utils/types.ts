@@ -19,7 +19,7 @@ export type AllOptional<T> = {
 
 export type RawID = number | string;
 
-export type GenericId = RawID | UniqueEntityID;
+export type GenericId = string | UniqueEntityID;
 
 export type GenericEntity = Record<string | number | symbol, any> & { id: UniqueEntityID | RawID };
 

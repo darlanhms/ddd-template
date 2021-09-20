@@ -1,7 +1,8 @@
 import { getNamespace } from 'cls-hooked';
 import { PrismaClient } from '.prisma/client';
+import BaseRepositoryMethods from '../BaseRepositoryMethods';
 
-export default abstract class BaseRepository {
+export default abstract class BaseRepository extends BaseRepositoryMethods {
     protected get prisma(): PrismaClient {
         const context = getNamespace('prisma');
 
