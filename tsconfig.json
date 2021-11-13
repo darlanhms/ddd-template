@@ -20,11 +20,9 @@
         "baseUrl": "./src",
         "noEmitOnError": true,
         "paths": {
-            "@core/*": ["./shared/core/*"],
-            "@database/*": ["./shared/infra/database/*"],
-            "@utils/*": ["./shared/core/utils/*"],
-            "@shared/*": ["./shared/*"],
-            "@user/*": ["./modules/user/*"]
+            "@core/*": ["./core/*"],
+            "@infra/*": ["./infra/*"],
+            "@moduleName/*": ["./modules/moduleName/*"]
         }
     },
     "include": [
